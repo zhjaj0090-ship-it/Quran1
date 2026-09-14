@@ -29,6 +29,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   isDark,
   toggleDarkMode,
   isPlayingAudio,
+  openAudioBar,
 }) => {
   const tabs = [
     { id: 'quran' as TabType, label: 'المصحف الشريف', icon: BookOpen },
@@ -62,9 +63,8 @@ export const Navbar: React.FC<NavbarProps> = ({
             </div>
           </div>
 
-
           {/* Desktop Navigation Tabs */}
-          <nav className="hidden lg:flex items-center gap-1.5 bg-stone-100/80 dark:bg-stone-800/60 p-1.5 rounded-2xl border border-stone-200/50 dark:border-stone-700/50
+          <nav className="hidden lg:flex items-center gap-1.5 bg-stone-100/80 dark:bg-stone-800/60 p-1.5 rounded-2xl border border-stone-200/50 dark:border-stone-700/50">
             {tabs.map(tab => {
               const Icon = tab.icon;
               const isActive = activeTab === tab.id;
@@ -77,7 +77,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                     isActive
                       ? 'bg-emerald-700 text-white shadow-sm shadow-emerald-800/30'
                       : 'text-stone-600 dark:text-stone-300 hover:text-stone-900 dark:hover:text-white hover:bg-stone-200/50 dark:hover:bg-stone-700/50'
-                  }}
+                  }`}
                 >
                   <Icon className="w-4 h-4" />
                   <span>{tab.label}</span>
@@ -91,7 +91,8 @@ export const Navbar: React.FC<NavbarProps> = ({
             {/* Live Audio Indicator */}
             {isPlayingAudio && (
               <div 
-                className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-300 dark:border-emerald-800/60 text-emerald-700 dark:text-emerald-300 text-xs font-semibold"
+                onClick={openAudioBar}
+                className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-300 dark:border-emerald-800/60 text-emerald-700 dark:text-emerald-300 text-xs font-semibold cursor-pointer"
                 title="الصوت يعمل الآن"
               >
                 <div className="flex items-end gap-0.5 h-3">
@@ -107,16 +108,19 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             {/* In-App PWA Install Button */}
             <PWAInstallButton />
-<a
-  href="https://wa.me/201080969038"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex items-center gap-2 px-3 py-2 rounded-xl text-green-500 hover:bg-green-500/10 transition-colors"
-  title="واتساب"
->
-  <MessageCircle className="w-5 h-5" />
-  <span className="text-sm font-medium hidden sm:inline">واتساب</span>
-</a>
+
+            {/* WhatsApp Link */}
+            <a
+              href="https://wa.me/201080969038"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-3 py-2 rounded-xl text-green-500 hover:bg-green-500/10 transition-colors"
+              title="واتساب"
+            >
+              <MessageCircle className="w-5 h-5" />
+              <span className="text-sm font-medium hidden sm:inline">واتساب</span>
+            </a>
+
             {/* Dark/Light Mode Dual Toggle Switch */}
             <button
               id="theme-toggle-btn"
