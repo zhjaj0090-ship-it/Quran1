@@ -61,20 +61,10 @@ export const Navbar: React.FC<NavbarProps> = ({
               </p>
             </div>
           </div>
-          
+
 
           {/* Desktop Navigation Tabs */}
-          <nav className="hidden lg:flex items-center gap-1.5 bg-stone-100/80 dark:bg-stone-800/60 p-1.5 rounded-2xl border border-stone-200/50 dark:border-stone-700/50">
-            <a
-  href="https://wa.me/201080969038"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex items-center gap-2 px-3 py-2 rounded-xl text-green-500 hover:bg-green-500/10 transition-colors"
-  title="واتساب"
->
-  <MessageCircle className="w-5 h-5" />
-  <span className="text-sm font-medium hidden sm:inline">واتساب</span>
-</a>
+          <nav className="hidden lg:flex items-center gap-1.5 bg-stone-100/80 dark:bg-stone-800/60 p-1.5 rounded-2xl border border-stone-200/50 dark:border-stone-700/50
             {tabs.map(tab => {
               const Icon = tab.icon;
               const isActive = activeTab === tab.id;
@@ -117,7 +107,16 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             {/* In-App PWA Install Button */}
             <PWAInstallButton />
-
+<a
+  href="https://wa.me/201080969038"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-2 px-3 py-2 rounded-xl text-green-500 hover:bg-green-500/10 transition-colors"
+  title="واتساب"
+>
+  <MessageCircle className="w-5 h-5" />
+  <span className="text-sm font-medium hidden sm:inline">واتساب</span>
+</a>
             {/* Dark/Light Mode Dual Toggle Switch */}
             <button
               id="theme-toggle-btn"
