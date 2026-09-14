@@ -77,7 +77,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                     isActive
                       ? 'bg-emerald-700 text-white shadow-sm shadow-emerald-800/30'
                       : 'text-stone-600 dark:text-stone-300 hover:text-stone-900 dark:hover:text-white hover:bg-stone-200/50 dark:hover:bg-stone-700/50'
-                  }`}
+                  }}
                 >
                   <Icon className="w-4 h-4" />
                   <span>{tab.label}</span>
