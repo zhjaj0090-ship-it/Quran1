@@ -53,7 +53,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             </div>
             <div>
               <h1 className="text-base sm:text-xl font-bold tracking-tight text-stone-900 dark:text-white flex items-center gap-2">
-                موقع القرآن الكريم
+                موقع زياد للقرآن الكريم
               </h1>
               <p className="text-[11px] sm:text-xs text-stone-500 dark:text-stone-400 font-medium hidden sm:block">
                 تلاوات خاشعة • قراءة • إذاعات • أذكار
