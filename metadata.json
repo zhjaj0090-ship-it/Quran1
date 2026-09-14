@@ -1,0 +1,6 @@
+{
+  "name": "موقع القرآن الكريم",
+  "description": "تطبيق إسلامي شامل ومصحف إلكتروني يضم القرآن الكريم تلاوة وقراءة، إذاعات حية، أذكار المسلم، مواقيت الصلاة، مسبحة إلكترونية، بتصميم PWA سريع وبدون إنترنت.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

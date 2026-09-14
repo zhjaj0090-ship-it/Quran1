@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="50%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#022c22"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="40%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <filter id="softGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background rounded rect -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+
+  <!-- Decorative Islamic 8-point geometric rosette star ring -->
+  <g stroke="url(#goldGrad)" stroke-width="2" opacity="0.3" fill="none">
+    <circle cx="256" cy="256" r="210"/>
+    <circle cx="256" cy="256" r="195" stroke-dasharray="4,6"/>
+  </g>
+
+  <!-- Central Quran Book Motif -->
+  <g filter="url(#softGlow)" transform="translate(0, 10)">
+    <!-- Book Stand (Rihal / حامل المصحف) -->
+    <path d="M 170 380 L 256 310 L 342 380 L 320 395 L 256 345 L 192 395 Z" fill="url(#goldGrad)" opacity="0.85"/>
+
+    <!-- Open Quran Pages -->
+    <!-- Left Page -->
+    <path d="M 256 180 C 220 160 160 165 110 178 C 105 180 100 185 100 192 L 100 320 C 100 326 106 331 112 330 C 160 318 220 315 256 336 Z" fill="#fcfbf7"/>
+    <path d="M 252 186 C 220 168 165 173 120 185 L 120 310 C 165 298 220 302 252 324 Z" fill="#f4f1ea"/>
+    
+    <!-- Text Lines on Left Page -->
+    <line x1="135" y1="210" x2="235" y2="202" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+    <line x1="135" y1="230" x2="235" y2="222" stroke="#64748b" stroke-width="2" stroke-linecap="round"/>
+    <line x1="135" y1="250" x2="235" y2="242" stroke="#64748b" stroke-width="2" stroke-linecap="round"/>
+    <line x1="135" y1="270" x2="235" y2="262" stroke="#64748b" stroke-width="2" stroke-linecap="round"/>
+    <line x1="150" y1="290" x2="220" y2="282" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Right Page -->
+    <path d="M 256 180 C 292 160 352 165 402 178 C 407 180 412 185 412 192 L 412 320 C 412 326 406 331 400 330 C 352 318 292 315 256 336 Z" fill="#ffffff"/>
+    <path d="M 260 186 C 292 168 347 173 392 185 L 392 310 C 347 298 292 302 260 324 Z" fill="#fcfbf7"/>
+
+    <!-- Text Lines on Right Page -->
+    <line x1="277" y1="202" x2="377" y2="210" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+    <line x1="277" y1="222" x2="377" y2="230" stroke="#64748b" stroke-width="2" stroke-linecap="round"/>
+    <line x1="277" y1="242" x2="377" y2="250" stroke="#64748b" stroke-width="2" stroke-linecap="round"/>
+    <line x1="277" y1="262" x2="377" y2="270" stroke="#64748b" stroke-width="2" stroke-linecap="round"/>
+    <line x1="292" y1="282" x2="362" y2="290" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Book Spine Ribbons & Gold Accent -->
+    <path d="M 254 176 L 258 176 L 258 344 L 254 344 Z" fill="url(#goldGrad)"/>
+
+    <!-- Bookmark Ribbon -->
+    <path d="M 256 220 C 270 260 285 300 270 350 L 260 340 L 250 350 C 255 300 255 260 256 220 Z" fill="#b91c1c"/>
+
+    <!-- Crescent & Star Glow at the top -->
+    <g transform="translate(256, 120)">
+      <!-- Crescent -->
+      <path d="M 0 -35 A 35 35 0 1 0 32 15 A 28 28 0 1 1 0 -35 Z" fill="url(#goldGrad)"/>
+      <!-- Small Star -->
+      <polygon points="18,-12 21,-4 29,-4 23,2 25,10 18,5 11,10 13,2 7,-4 15,-4" fill="url(#goldGrad)"/>
+    </g>
+  </g>
+</svg>
